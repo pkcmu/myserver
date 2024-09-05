@@ -1,4 +1,4 @@
-name: My workflow
+name: main
 on: [push]
 jobs:
   build:    
