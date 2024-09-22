@@ -15,6 +15,7 @@ async function test_json_placeholder() {
         title: 'foo',
         body: 'bar',
         userId: 1,
+        userIdxxx: 1
     };
     try {
         const response:any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
@@ -23,8 +24,7 @@ async function test_json_placeholder() {
             id: 101,
             title: 'foo',
             body: 'bar',
-            userId: 1,
-            userIdxxx: 1
+            userId: 1
         } as any
 
         const keys:string[] = Object.keys(correct_result);
