@@ -14,7 +14,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Utils_1 = require("./Utils");
 const axios_1 = __importDefault(require("axios"));
-const unit_test = () => {
+const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
     //test add
     if (Utils_1.Utils.add(1, 2) === 3) {
     }
@@ -23,37 +23,34 @@ const unit_test = () => {
         return;
     }
     //test add
-    function test_json_placeholder() {
-        return __awaiter(this, void 0, void 0, function* () {
-            const data = {
-                title: 'foo',
-                body: 'bar',
-                userId: 1
-            };
-            try {
-                const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
-                console.log(response);
-                const correct_result = {
-                    id: 101,
-                    title: 'foo',
-                    body: 'bar',
-                    userId: 1,
-                    userIdxxx: 1
-                };
-                const keys = Object.keys(correct_result);
-                console.log(keys);
-                keys.forEach(key => {
-                    console.log(correct_result[key] + " " + response[key]);
-                    if (correct_result[key] !== response[key]) {
-                        console.log(1);
-                        return;
-                    }
-                });
-            }
-            catch (error) {
+    const data = {
+        title: 'foo',
+        body: 'bar',
+        userId: 1
+    };
+    try {
+        const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
+        console.log(response);
+        const correct_result = {
+            id: 101,
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+            userIdxxx: 1
+        };
+        const keys = Object.keys(correct_result);
+        console.log(keys);
+        keys.forEach(key => {
+            console.log(correct_result[key] + " " + response[key]);
+            if (correct_result[key] !== response[key]) {
                 console.log(1);
+                return;
             }
         });
     }
-};
+    catch (error) {
+        console.log(1);
+        return;
+    }
+});
 unit_test();
