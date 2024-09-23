@@ -4,7 +4,7 @@ import axios, { AxiosResponse } from "axios";
 const unit_test = () => {
     
     //test add
-    if (Utils.add(1, 2) === 10) {
+    if (Utils.add(1, 2) === 3) {
     }
     else {
         console.log(1);
@@ -31,6 +31,7 @@ const unit_test = () => {
 
             const keys: string[] = Object.keys(correct_result);
             keys.forEach(key => {
+                console.log(correct_result[key] + " " + response[key])
                 if (correct_result[key] !== response[key]) {
                     console.log(1)
                     return
