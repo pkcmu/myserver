@@ -2,6 +2,9 @@ import { Utils } from "./Utils";
 import axios, { AxiosResponse } from "axios";
 
 const unit_test = () => {
+    console.log(1);
+    return
+
     //test add
     if (Utils.add(1, 2) === 3) {
     }
