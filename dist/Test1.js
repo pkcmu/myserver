@@ -30,8 +30,6 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
     };
     try {
         const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
-        console.log(1);
-        return;
         const correct_result = {
             id: 101,
             title: 'foo',
@@ -40,12 +38,12 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
             userIdxxx: 1
         };
         const keys = Object.keys(correct_result);
-        keys.forEach(key => {
-            if (correct_result[key] !== response[key]) {
+        for (const k of keys) {
+            if (correct_result[k] !== response[k]) {
                 console.log(1);
                 return;
             }
-        });
+        }
     }
     catch (error) {
         console.log(1);

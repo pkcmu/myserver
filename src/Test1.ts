@@ -18,8 +18,6 @@ const unit_test = async () => {
     };
     try {
         const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
-        console.log(1);
-        return
 
         const correct_result = {
             id: 101,
@@ -30,12 +28,14 @@ const unit_test = async () => {
         } as any
 
         const keys: string[] = Object.keys(correct_result);
-        keys.forEach(key => {
-            if (correct_result[key] !== response[key]) {
+
+        for(const k of keys){
+            if (correct_result[k] !== response[k]) {
                 console.log(1)
                 return
             }
-        })
+        }
+        
     } catch (error) {
         console.log(1)
         return
