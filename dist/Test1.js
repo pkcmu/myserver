@@ -14,38 +14,45 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const Utils_1 = require("./Utils");
 const axios_1 = __importDefault(require("axios"));
-//test add
-if (Utils_1.Utils.add(1, 2) === 3) {
-    console.log(0);
-}
-else {
+const unit_test = () => {
     console.log(1);
-}
-//test add
-function test_json_placeholder() {
-    return __awaiter(this, void 0, void 0, function* () {
-        const data = {
-            title: 'foo',
-            body: 'bar',
-            userId: 1,
-        };
-        try {
-            const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
-            const correct_result = {
-                id: 101,
+    return;
+    //test add
+    if (Utils_1.Utils.add(1, 2) === 3) {
+    }
+    else {
+        console.log(1);
+        return;
+    }
+    //test add
+    function test_json_placeholder() {
+        return __awaiter(this, void 0, void 0, function* () {
+            const data = {
                 title: 'foo',
                 body: 'bar',
                 userId: 1
             };
-            const keys = Object.keys(correct_result);
-            keys.forEach(key => {
-                if (correct_result[key] !== response[key]) {
-                    console.log(1);
-                }
-            });
-        }
-        catch (error) {
-            console.log(1);
-        }
-    });
-}
+            try {
+                const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
+                const correct_result = {
+                    id: 101,
+                    title: 'foo',
+                    body: 'bar',
+                    userId: 1,
+                    userIdxxx: 1
+                };
+                const keys = Object.keys(correct_result);
+                keys.forEach(key => {
+                    if (correct_result[key] !== response[key]) {
+                        console.log(1);
+                        return;
+                    }
+                });
+            }
+            catch (error) {
+                console.log(1);
+            }
+        });
+    }
+};
+unit_test();
