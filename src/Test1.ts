@@ -4,7 +4,7 @@ import axios, { AxiosResponse } from "axios";
 const unit_test = () => {
     
     //test add
-    if (Utils.add(1, 2) === 3) {
+    if (Utils.add(1, 2) === 10) {
     }
     else {
         console.log(1);

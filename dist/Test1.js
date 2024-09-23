@@ -16,7 +16,7 @@ const Utils_1 = require("./Utils");
 const axios_1 = __importDefault(require("axios"));
 const unit_test = () => {
     //test add
-    if (Utils_1.Utils.add(1, 2) === 3) {
+    if (Utils_1.Utils.add(1, 2) === 10) {
     }
     else {
         console.log(1);
