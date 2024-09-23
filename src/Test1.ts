@@ -10,16 +10,16 @@ const unit_test = async () => {
         return
     }
 
-    //test add
+    //test getUser
     const data: any = {
         title: 'foo',
         body: 'bar',
         userId: 1
     };
 
+    
     try {
-        const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
-        // console.log( JSON.stringify(response.data) )
+        const response: any = await Utils.getUser(data);
         const correct_result = {
             id: 101,
             title: 'foo',
@@ -30,15 +30,16 @@ const unit_test = async () => {
         const keys: string[] = Object.keys(correct_result);
         for(const k of keys){
             if (correct_result[k] !== response.data[k]) {
-                console.log(k)
+                console.log('error at key'+k)
                 return
             }
         }
-
     } catch (error) {
-        console.log(2)
+        console.log('error connection to database')
         return
     }
+    
+
 }
 
 unit_test()

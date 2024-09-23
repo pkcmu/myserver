@@ -30,16 +30,8 @@ app.use('/api', userRoutes);
 
 app.get('/', async (req: Request, res: Response) => {
     
-    // res.send(Utils.add(1, 2) + "");
+    res.send(Utils.add(1, 2) + "");
 
-    const data: any = {
-      title: 'foo',
-      body: 'bar',
-      userId: 1
-  };
-  const user = await Utils.getUser(data)
-  console.log( JSON.stringify(user.data))
-  res.send( JSON.stringify(user.data) + "");
 });
 
 mongoose.connect(mongoUri)

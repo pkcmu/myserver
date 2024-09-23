@@ -11,8 +11,7 @@ function add(a: number, b: number): number {
 
 async function getUser(data:any): Promise<any> {
     const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
-    return response;
-   
+    return response.data;
 }
 
 export const Utils = { add, getUser }
