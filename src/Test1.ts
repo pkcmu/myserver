@@ -27,9 +27,6 @@ const unit_test = async () => {
         } as any
 
         const keys: string[] = Object.keys(correct_result);
-        console.log("12345")
-        return
-
         for(const k of keys){
             if (correct_result[k] !== response.data[k]) {
                 console.log(1)
