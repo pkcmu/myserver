@@ -15,8 +15,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Utils_1 = require("./Utils");
 const axios_1 = __importDefault(require("axios"));
 const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
-    console.log(1);
-    return;
     //test add
     if (Utils_1.Utils.add(1, 2) === 3) {
     }
@@ -31,6 +29,8 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
         userId: 1
     };
     try {
+        console.log(1);
+        return;
         const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
         const correct_result = {
             id: 101,

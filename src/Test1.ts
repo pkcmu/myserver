@@ -2,8 +2,6 @@ import { Utils } from "./Utils";
 import axios, { AxiosResponse } from "axios";
 
 const unit_test = async () => {
-    console.log(1);
-        return
     //test add
     if (Utils.add(1, 2) === 3) {
     }
@@ -19,6 +17,8 @@ const unit_test = async () => {
         userId: 1
     };
     try {
+        console.log(1);
+        return
         const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
 
         const correct_result = {
