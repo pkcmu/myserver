@@ -29,9 +29,9 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
         userId: 1
     };
     try {
+        const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
         console.log(1);
         return;
-        const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
         const correct_result = {
             id: 101,
             title: 'foo',
