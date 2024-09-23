@@ -29,7 +29,7 @@ const unit_test = async () => {
         const keys: string[] = Object.keys(correct_result);
         for(const k of keys){
             if (correct_result[k] !== response.data[k]) {
-                console.log(1)
+                console.log(k)
                 return
             }
         }
