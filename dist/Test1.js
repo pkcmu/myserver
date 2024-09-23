@@ -37,10 +37,10 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
             userId: 1
         };
         const keys = Object.keys(correct_result);
-        console.log(JSON.stringify(response));
+        console.log("12345");
         return;
         for (const k of keys) {
-            if (correct_result[k] !== response[k]) {
+            if (correct_result[k] !== response.data[k]) {
                 console.log(1);
                 return;
             }
