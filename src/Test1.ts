@@ -16,6 +16,7 @@ const unit_test = async () => {
         body: 'bar',
         userId: 1
     };
+
     try {
         const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
         // console.log( JSON.stringify(response.data) )
