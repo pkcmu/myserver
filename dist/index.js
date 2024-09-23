@@ -31,15 +31,7 @@ app.use((0, cors_1.default)());
 // Routes
 app.use('/api', UserRoutes_1.default);
 app.get('/', (req, res) => __awaiter(void 0, void 0, void 0, function* () {
-    // res.send(Utils.add(1, 2) + "");
-    const data = {
-        title: 'foo',
-        body: 'bar',
-        userId: 1
-    };
-    const user = yield Utils_1.Utils.getUser(data);
-    console.log(JSON.stringify(user.data));
-    res.send(JSON.stringify(user.data) + "");
+    res.send(Utils_1.Utils.add(1, 2) + "");
 }));
 mongoose_1.default.connect(mongoUri)
     .then(() => {

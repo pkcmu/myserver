@@ -8,12 +8,8 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
         step((generator = generator.apply(thisArg, _arguments || [])).next());
     });
 };
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
 Object.defineProperty(exports, "__esModule", { value: true });
 const Utils_1 = require("./Utils");
-const axios_1 = __importDefault(require("axios"));
 const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
     //test add
     if (Utils_1.Utils.add(1, 2) === 3) {
@@ -22,15 +18,14 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
         console.log(1);
         return;
     }
-    //test add
+    //test getUser
     const data = {
         title: 'foo',
         body: 'bar',
         userId: 1
     };
     try {
-        const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
-        // console.log( JSON.stringify(response.data) )
+        const response = yield Utils_1.Utils.getUser(data);
         const correct_result = {
             id: 101,
             title: 'foo',
@@ -40,13 +35,13 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
         const keys = Object.keys(correct_result);
         for (const k of keys) {
             if (correct_result[k] !== response.data[k]) {
-                console.log(1);
+                console.log('error at key' + k);
                 return;
             }
         }
     }
     catch (error) {
-        console.log(2);
+        console.log('error connection to database');
         return;
     }
 });

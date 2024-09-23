@@ -23,7 +23,7 @@ function add(a, b) {
 function getUser(data) {
     return __awaiter(this, void 0, void 0, function* () {
         const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
-        return response;
+        return response.data;
     });
 }
 exports.Utils = { add, getUser };

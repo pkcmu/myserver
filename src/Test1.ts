@@ -17,7 +17,6 @@ const unit_test = async () => {
         userId: 1
     };
 
-    
     try {
         const response: any = await Utils.getUser(data);
         const correct_result = {
@@ -34,6 +33,7 @@ const unit_test = async () => {
                 return
             }
         }
+        
     } catch (error) {
         console.log('error connection to database')
         return
