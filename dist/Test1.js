@@ -32,6 +32,7 @@ const unit_test = () => {
             };
             try {
                 const response = yield axios_1.default.post('https://jsonplaceholder.typicode.com/users', data);
+                console.log(response);
                 const correct_result = {
                     id: 101,
                     title: 'foo',
@@ -40,6 +41,7 @@ const unit_test = () => {
                     userIdxxx: 1
                 };
                 const keys = Object.keys(correct_result);
+                console.log(keys);
                 keys.forEach(key => {
                     console.log(correct_result[key] + " " + response[key]);
                     if (correct_result[key] !== response[key]) {
