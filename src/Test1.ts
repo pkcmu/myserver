@@ -18,21 +18,22 @@ const unit_test = async () => {
     };
     try {
         const response: any = await axios.post('https://jsonplaceholder.typicode.com/users', data);
-        console.log( JSON.stringify(response.data) )
-        // const correct_result = {
-        //     id: 101,
-        //     title: 'foo',
-        //     body: 'bar',
-        //     userId: 1
-        // } as any
+        // console.log( JSON.stringify(response.data) )
+        const correct_result = {
+            id: 101,
+            title: 'foo',
+            body: 'bar',
+            userId: 1,
+            userIdxxx: 1
+        } as any
 
-        // const keys: string[] = Object.keys(correct_result);
-        // for(const k of keys){
-        //     if (correct_result[k] !== response.data[k]) {
-        //         console.log(1)
-        //         return
-        //     }
-        // }
+        const keys: string[] = Object.keys(correct_result);
+        for(const k of keys){
+            if (correct_result[k] !== response.data[k]) {
+                console.log(1)
+                return
+            }
+        }
 
     } catch (error) {
         console.log(2)
