@@ -45,7 +45,7 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
         }
     }
     catch (error) {
-        console.log(1);
+        console.log(2);
         return;
     }
 });

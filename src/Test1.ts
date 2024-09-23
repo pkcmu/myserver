@@ -35,7 +35,7 @@ const unit_test = async () => {
         }
 
     } catch (error) {
-        console.log(1)
+        console.log(2)
         return
     }
 }
