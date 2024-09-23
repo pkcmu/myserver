@@ -34,8 +34,7 @@ const unit_test = () => __awaiter(void 0, void 0, void 0, function* () {
             id: 101,
             title: 'foo',
             body: 'bar',
-            userId: 1,
-            userIdxxx: 1
+            userId: 1
         };
         const keys = Object.keys(correct_result);
         for (const k of keys) {

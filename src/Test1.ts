@@ -23,8 +23,7 @@ const unit_test = async () => {
             id: 101,
             title: 'foo',
             body: 'bar',
-            userId: 1,
-            userIdxxx: 1
+            userId: 1
         } as any
 
         const keys: string[] = Object.keys(correct_result);
@@ -35,7 +34,7 @@ const unit_test = async () => {
                 return
             }
         }
-        
+
     } catch (error) {
         console.log(1)
         return
