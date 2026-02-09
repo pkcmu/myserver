@@ -18,7 +18,7 @@ jobs:
     - name: Run Test1
       run: |
         output=$(node dist/Test1.js)
-        # Capture the exit code of the previous command
+        # Capture the exit code of the previous command1
         exit_code=$output
   
         # Check the exit code to determine if there was an error
